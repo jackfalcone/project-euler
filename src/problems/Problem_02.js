@@ -6,7 +6,6 @@ const Problem_02 = ({ maxNum }) => {
     const [evenValues, setEvenValues] = useState(0);
 
     useEffect(() => {
-        console.log(maxNum);
         if (maxNum <= 0) return;
         const fibArr = [1, 2];
         let nextFib = 0;
