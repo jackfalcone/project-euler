@@ -1,4 +1,5 @@
 import Problem from "./components/Problem";
+import Problem_01 from "./problems/Problem_01";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           title="Multiples of 3 and 5" 
           description="If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000." 
         />
+        <Problem_01 maxNum={1000} />
         <Problem 
           number={2} 
           title="Even Fibonacci numbers" 
