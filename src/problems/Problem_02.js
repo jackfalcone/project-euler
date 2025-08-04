@@ -25,7 +25,7 @@ const Problem_02 = ({ maxNum }) => {
 
     return (
         <>
-            <Solution solutionValue={evenValues}/>
+            <Solution solutionValue={evenValues} />
         </>
     )
 }
