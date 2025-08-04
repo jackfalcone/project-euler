@@ -15,13 +15,15 @@ const Problem_01 = ({ maxNum }) => {
     };
 
     useEffect(() => {
-        if (maxNum <= 0) return;
+        // Check if prop is Int and positive
+        if (maxNum <= 0 || !Number.isInteger(maxNum)) return;
+
         getSum(maxNum);
     }, [])
 
     return (
         <>
-            <Solution solutionValue={sum.toString()} />
+            <Solution solutionValue={sum} />
         </>
     )
 }

@@ -6,7 +6,9 @@ const Problem_02 = ({ maxNum }) => {
     const [evenValues, setEvenValues] = useState(0);
 
     useEffect(() => {
-        if (maxNum <= 0) return;
+        // Check if prop is Int and positive
+        if (maxNum <= 0 || !Number.isInteger(maxNum)) return;
+        
         const fibArr = [1, 2];
         let nextFib = 0;
         while (nextFib < maxNum) {
