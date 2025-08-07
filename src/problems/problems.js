@@ -3,6 +3,7 @@ import Problem_02 from "./Problem_02";
 import Problem_03 from "./Problem_03";
 import Problem_04 from "./Problem_04";
 import Problem_05 from "./Problem_05";
+import Problem_06 from "./Problem_06";
 
 const problems = [
   {
@@ -39,6 +40,13 @@ const problems = [
     description: "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?",
     component: Problem_05,
     props: { maxNum: 20 },
+  },
+  {
+    number: 6,
+    title: "Sum square difference",
+    description: "The sum of the squares of the first ten natural numbers is 385, The square of the sum of the first ten natural numbers is 3025, Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 2640. Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.",
+    component: Problem_06,
+    props: { maxNum: 100 },
   },
 ];
 
