@@ -2,6 +2,7 @@ import Problem_01 from "./Problem_01";
 import Problem_02 from "./Problem_02";
 import Problem_03 from "./Problem_03";
 import Problem_04 from "./Problem_04";
+import Problem_05 from "./Problem_05";
 
 const problems = [
   {
@@ -31,6 +32,13 @@ const problems = [
     description: "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.",
     component: Problem_04,
     props: { digits: 3 },
+  },
+  {
+    number: 5,
+    title: "Smallest multiple",
+    description: "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?",
+    component: Problem_05,
+    props: { maxNum: 20 },
   },
 ];
 
