@@ -4,6 +4,7 @@ import Problem_03 from "./Problem_03";
 import Problem_04 from "./Problem_04";
 import Problem_05 from "./Problem_05";
 import Problem_06 from "./Problem_06";
+import Problem_07 from "./Problem_07";
 
 const problems = [
   {
@@ -47,6 +48,13 @@ const problems = [
     description: "The sum of the squares of the first ten natural numbers is 385, The square of the sum of the first ten natural numbers is 3025, Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 2640. Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.",
     component: Problem_06,
     props: { maxNum: 100 },
+  },
+  {
+    number: 7,
+    title: "10 001st Prime",
+    description: "By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13. What is the 10 001st prime number?",
+    component: Problem_07,
+    props: { nth: 10001 },
   },
 ];
 
