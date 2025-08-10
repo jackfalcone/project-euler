@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_09 = ({ sum }) => {
+const Problem_09 = ({ initialSum }) => {
+    const [sum, setSum] = useState(initialSum);
     const [triplet, setTriplet] = useState({});
     const [solutionValue, setSolutionValue] = useState('');
 
@@ -50,6 +52,7 @@ const Problem_09 = ({ sum }) => {
 
     return (
         <>
+            <UserInput label="Sum (S)" inputType="number" value={sum} onChange={(e) => setSum(parseInt(e.target.value))} min={1} />
             <Solution solutionValue={solutionValue} />
         </>
     )

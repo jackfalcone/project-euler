@@ -73,7 +73,7 @@ const problems = [
     title: "Special Pythagorean Triplet",
     description: "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a2 + b2 = c2. For example, 3sq + 4sq = 9 + 16 = 25 = 5sq. There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.",
     component: Problem_09,
-    props: { sum: 1000 },
+    props: { initialSum: 1000 },
   }
 ];
 
