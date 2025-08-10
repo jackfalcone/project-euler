@@ -8,7 +8,8 @@ const UserInput = ({ label, inputType, value, onChange, min }) => (
             value={value}
             onChange={onChange}
             min={min}
-            className="w-full px-3 py-1.5 border border-blue-400 bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-lime-200 text-lg font-Audiowide drop-shadow-[0_0_10px_rgba(59,130,246,0.7)]"
+            max={100000}
+            className="w-full px-3 py-1.5 border border-blue-400 bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-lime-200 text-base font-Audiowide drop-shadow-[0_0_10px_rgba(59,130,246,0.7)]"
         />
     </label>
 );

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_06 = ({ maxNum }) => {
+const Problem_06 = ({ initialMaxNum }) => {
+    const [maxNum, setMaxNum] = useState(initialMaxNum);
     const [difference, setDifference] = useState(0);
 
     useEffect(() => {
@@ -22,6 +24,7 @@ const Problem_06 = ({ maxNum }) => {
 
     return (
         <>
+            <UserInput label="Number" inputType="number" value={maxNum} onChange={(e) => setMaxNum(parseInt(e.target.value))} min={1} />
             <Solution solutionValue={difference} />
         </>
     )

@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_07 = ({ nth }) => {
+const Problem_07 = ({ initialNth }) => {
+    const [nth, setNth] = useState(initialNth);
     const [nthPrime, setNthPrime] = useState(0);
 
     // Get upper limit for sieve of Eratosthenes
@@ -50,6 +52,7 @@ const Problem_07 = ({ nth }) => {
 
     return (
         <>
+            <UserInput label="Nth prime" inputType="number" value={nth} onChange={(e) => setNth(parseInt(e.target.value))} min={1} />
             <Solution solutionValue={nthPrime} />
         </>
     )
