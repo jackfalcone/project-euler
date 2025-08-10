@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_08 = ({ digits, numStr }) => {
+const Problem_08 = ({ initialDigits, numStr }) => {
+    const [digits, setDigits] = useState(initialDigits);
     const [number, setNumber] = useState([]);
     const [maxProduct, setMaxProduct] = useState(0);
 
@@ -30,7 +32,7 @@ const Problem_08 = ({ digits, numStr }) => {
                     if (product > currentMaxProduct) {
                         currentMaxProduct = product;
                     }
-                    
+
                     jumpZero = false;
                 } else {
                     jumpZero = true;
@@ -38,11 +40,12 @@ const Problem_08 = ({ digits, numStr }) => {
             }
         }
 
-        setMaxProduct(currentMaxProduct);
+        setMaxProduct(currentMaxProduct ? currentMaxProduct : 'No solution found');
     }, [number, digits])
 
     return (
         <>
+            <UserInput label="Digits" inputType="number" value={digits} onChange={(e) => setDigits(parseInt(e.target.value))} min={1} />
             <Solution solutionValue={maxProduct} />
         </>
     )
