@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_05 = ({ maxNum }) => {
+const Problem_05 = ({ initialMaxNum }) => {
+    const [maxNum, setMaxNum] = useState(initialMaxNum);
     const [solutionValue, setSolutionValue] = useState(0);
 
     // Greatest common divisor
@@ -33,6 +35,7 @@ const Problem_05 = ({ maxNum }) => {
 
     return (
         <>
+            <UserInput inputType="number" label="Number" value={maxNum} onChange={(e) => setMaxNum((parseInt(e.target.value) <= 50) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={solutionValue} />
         </>
     )

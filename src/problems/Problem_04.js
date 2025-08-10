@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import Solution from "../components/Solution"
+import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
 const isPalindrome = (num) => {
   const str = num.toString();
   return str === str.split('').reverse().join('');
 };
 
-const Problem_04 = ({ digits }) => {
+const Problem_04 = ({ initialDigits }) => {
+    const [digits, setDigits] = useState(initialDigits);
     const [largestPalindrome, setLargestPalindrome] = useState(0);
 
     useEffect(() => {
@@ -33,6 +35,7 @@ const Problem_04 = ({ digits }) => {
 
     return (
         <>
+            <UserInput label="Digits" inputType="number" value={digits} onChange={(e) => setDigits((parseInt(e.target.value) <= 6) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={largestPalindrome} />
         </>
     )

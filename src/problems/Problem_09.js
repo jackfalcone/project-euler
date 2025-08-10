@@ -52,7 +52,7 @@ const Problem_09 = ({ initialSum }) => {
 
     return (
         <>
-            <UserInput label="Sum (S)" inputType="number" value={sum} onChange={(e) => setSum(parseInt(e.target.value))} min={1} />
+            <UserInput label="Sum (S)" inputType="number" value={sum} onChange={(e) => setSum((parseInt(e.target.value) <= 100000) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={solutionValue} />
         </>
     )

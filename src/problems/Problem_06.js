@@ -19,12 +19,12 @@ const Problem_06 = ({ initialMaxNum }) => {
 
         const sumSquare = Math.pow(sum, 2);
 
-        setDifference(sumSquare - sumSquares);
+        setDifference((sumSquare - sumSquares) ? sumSquare - sumSquares : "No difference");
     }, [maxNum])
 
     return (
         <>
-            <UserInput label="Number" inputType="number" value={maxNum} onChange={(e) => setMaxNum(parseInt(e.target.value))} min={1} />
+            <UserInput label="Number" inputType="number" value={maxNum} onChange={(e) => setMaxNum((parseInt(e.target.value) <= 1000) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={difference} />
         </>
     )

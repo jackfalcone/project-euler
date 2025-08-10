@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_01 = ({ maxNum }) => {
+const Problem_01 = ({ initialMaxNum }) => {
+    const [maxNum, setMaxNum] = useState(initialMaxNum);
     const [sum, setSum] = useState(0);
 
     const getSum = maxNum => {
@@ -19,10 +21,11 @@ const Problem_01 = ({ maxNum }) => {
         if (maxNum <= 0 || !Number.isInteger(maxNum)) return;
 
         getSum(maxNum);
-    }, [])
+    }, [maxNum])
 
     return (
         <>
+            <UserInput label="Max Number" inputType="number" value={maxNum} onChange={(e) => setMaxNum((parseInt(e.target.value) <= 1000000) ? parseInt(e.target.value) : '')} min={1} />    
             <Solution solutionValue={sum} />
         </>
     )

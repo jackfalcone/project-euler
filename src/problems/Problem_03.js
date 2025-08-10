@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
+import UserInput from "../components/UserInput";
 
-const Problem_03 = ({ num }) => {
+const Problem_03 = ({ initialNum }) => {
+    const [num, setNum] = useState(initialNum);
     const [number, setNumber] = useState(0);
     const [primeFactors, setPrimeFactors] = useState([]);
     const [largestPrimeFactor, setLargestPrimeFactor] = useState(0);
@@ -54,6 +56,7 @@ const Problem_03 = ({ num }) => {
 
     return (
         <>
+            <UserInput label="Number" inputType="number" value={num} onChange={(e) => setNum((parseInt(e.target.value) <= 1000000000) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={largestPrimeFactor} />
         </>
     )

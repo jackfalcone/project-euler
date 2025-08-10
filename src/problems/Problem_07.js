@@ -52,7 +52,7 @@ const Problem_07 = ({ initialNth }) => {
 
     return (
         <>
-            <UserInput label="Nth prime" inputType="number" value={nth} onChange={(e) => setNth(parseInt(e.target.value))} min={1} />
+            <UserInput label="Nth prime" inputType="number" value={nth} onChange={(e) => setNth((parseInt(e.target.value) <= 1000000) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={nthPrime} />
         </>
     )

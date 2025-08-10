@@ -45,7 +45,7 @@ const Problem_08 = ({ initialDigits, numStr }) => {
 
     return (
         <>
-            <UserInput label="Digits" inputType="number" value={digits} onChange={(e) => setDigits(parseInt(e.target.value))} min={1} />
+            <UserInput label="Digits" inputType="number" value={digits} onChange={(e) => setDigits((parseInt(e.target.value) <= 1000) ? parseInt(e.target.value) : '')} min={1} />
             <Solution solutionValue={maxProduct} />
         </>
     )
