@@ -9,7 +9,7 @@ function App() {
   
   return (
     <div className="App pb-32 w-screen min-h-screen bg-black mx-auto">
-      <div className="pt-4 mx-auto max-w-lg flex flex-col">
+      <div className="pt-4 mx-auto max-w-[95%] sm:max-w-lg flex flex-col">
         <h1 className="mt-3 mb-4 text-5xl text-green-500 text-center font-Audiowide drop-shadow-[0_0_15px_rgba(34,197,94,0.9)]">
           Project Euler
         </h1>
