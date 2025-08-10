@@ -7,6 +7,7 @@ import Problem_06 from "./Problem_06";
 import Problem_07 from "./Problem_07";
 import Problem_08 from "./Problem_08";
 import Problem_09 from "./Problem_09";
+import Problem_10 from "./Problem_10";
 
 const problems = [
   {
@@ -74,6 +75,13 @@ const problems = [
     description: "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a2 + b2 = c2. For example, 3sq + 4sq = 9 + 16 = 25 = 5sq. There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.",
     component: Problem_09,
     props: { initialSum: 1000 },
+  },
+  {
+    number: 10,
+    title: "Summation of Primes",
+    description: "The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. Find the sum of all the primes below two million.",
+    component: Problem_10,
+    props: { initialMaxNum: 2000000 },
   }
 ];
 
