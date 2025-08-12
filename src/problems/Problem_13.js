@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Solution from "../components/Solution";
 import UserInput from "../components/UserInput";
 
-const Problem_13 = () => {
+const Problem_13 = ({ initialDigits, numbersStrArr }) => {
+    const [digits, setDigits] = useState(initialDigits);
 
     return (
         <>
