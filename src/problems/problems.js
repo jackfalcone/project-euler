@@ -11,6 +11,7 @@ import Problem_10 from "./Problem_10";
 import Problem_11 from "./Problem_11";
 import Problem_12 from "./Problem_12";
 import Problem_13 from "./Problem_13";
+import Problem_14 from "./Problem_14";
 
 const problems = [
   {
@@ -234,7 +235,14 @@ const problems = [
         "53503534226472524250874054075591789781264330331690"
       ]
     },
-  }
+  },
+  {
+    number: 14,
+    title: "Longest Collatz Sequence",
+    description: "The following iterative sequence is defined for the set of positive integers: n -> n/2 (n is even) | n -> 3n + 1 (n is odd). 13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1. It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1. Which starting number, under one million, produces the longest chain? NOTE: Once the chain starts the terms are allowed to go above one million.",
+    component: Problem_14,
+    props: { initialMaxNum: 1000000 },
+  },
 ];
 
 export default problems;
